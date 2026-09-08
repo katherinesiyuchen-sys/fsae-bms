@@ -1,0 +1,14 @@
+# VS Code Local History
+.history/
+
+# KiCad
+*.kicad_prl
+*-backups/
+fp-info-cache
+~*.lck
+_autosave-*
+*.kicad_sch-bak
+*.kicad_pcb-bak
+
+# macOS
+.DS_Store
