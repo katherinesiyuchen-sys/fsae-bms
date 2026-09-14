@@ -4443,6 +4443,52 @@
 		)
 	)
 	(sheet
+		(at 33.655 80.01)
+		(size 21.59 13.335)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "c4781af4-0f83-4b5f-b18c-3d9dd3181ebe")
+		(property "Sheetname" "differential-sensing"
+			(at 33.655 79.2984 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "differential-sensing.kicad_sch"
+			(at 33.655 93.9296 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "feb-bms"
+				(path "/6d76ad74-633b-4854-84fa-dd9a481927d0"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 134.62 59.69)
 		(size 27.94 19.05)
 		(exclude_from_sim no)

@@ -416,7 +416,7 @@
         "uuid": "6d76ad74-633b-4854-84fa-dd9a481927d0"
       }
     ],
-    "used_designators": "L1-2,FB1,U1-22,C1-51,SW1,K1,Q1-9,D1-12,#PWR1-142,R1-80,J1-7,F1",
+    "used_designators": "R81-84,C52-62,#PWR143-177,D13,U23-30",
     "variants": []
   },
   "sheets": [
@@ -451,6 +451,10 @@
     [
       "8d000576-19a2-451d-be65-2835f3350817",
       "power"
+    ],
+    [
+      "c4781af4-0f83-4b5f-b18c-3d9dd3181ebe",
+      "differential-sensing"
     ]
   ],
   "text_variables": {},

@@ -1,0 +1,60 @@
+Qty (for 1 board),Manufacturer Part #,Price/unit ($),Purchase URL,Reference Designator,Description (include component value if applicable),Datasheet Link
+2,ADG1408YRUZ,,,"U1, U2","8:1 analog multiplexer, break-before-make, TSSOP-16 — flying-cap front end (36 V max; TMUX8108 at 14S)",https://www.analog.com/media/en/technical-documentation/data-sheets/ADG1408_1409.pdf
+1,LM339DT,,,U4,"Quad comparator, open-collector, SOIC-14 — OV/UV/OT/watchdog inverter",https://www.st.com/resource/en/datasheet/lm139.pdf
+1,SN74LVC1G10DBVR,,,U3,"3-input NAND, SOT-23-6 — address decode /ADDR7",https://www.ti.com/lit/ds/symlink/sn74lvc1g10.pdf
+3,SN74LVC1G02DBVR,,,"U5, U7, U8","2-input NOR, SOT-23-5 — address gate + SR latch",https://www.ti.com/lit/ds/symlink/sn74lvc1g02.pdf
+2,SN74LVC1G32DBVR,,,"U6, U11","2-input OR, SOT-23-5 — fault OR tree",https://www.ti.com/lit/ds/symlink/sn74lvc1g32.pdf
+1,TPS3823-33DBVR,,,U9,"Watchdog supervisor 3.3 V, SOT-23-5",https://www.ti.com/lit/ds/symlink/tps3823.pdf
+1,ADR4525BRZ,,,U10,"2.500 V precision voltage reference, SOIC-8",https://www.analog.com/media/en/technical-documentation/data-sheets/ADR4520_4525_4530_4533_4540_4550.pdf
+1,STM32F446RET6,,,U18,"Cortex-M4 MCU, 512 KB flash, LQFP-64",https://www.st.com/resource/en/datasheet/stm32f446re.pdf
+1,"TJA1051T/3,118",,,U19,"CAN transceiver with 3.3 V VIO, SOIC-8",https://www.nxp.com/docs/en/data-sheet/TJA1051.pdf
+1,AP63203WU-7,,,U20,"Synchronous buck 12 V→5 V, 2 A, TSOT-26",https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf
+1,MIC5219-3.3YM5-TR,,,U21,"Low-noise LDO 5 V→3.3 V, 500 mA, SOT-23-5",https://ww1.microchip.com/downloads/en/DeviceDoc/MIC5219-500mA-Peak-Output-LDO-Regulator-DS20006021A.pdf
+1,TPS61040DBVR,,,U22,"Boost converter 12 V→28 V for mux rail, SOT-23-5",https://www.ti.com/lit/ds/symlink/tps61040.pdf
+6,LTV-817S,,,U12–U17,"Optocoupler, 1-ch, SMD-4 — isolated balance FET gate drive",http://www.us.liteon.com/downloads/LTV-817-827-847.PDF
+8,BSS138,,,Q1–Q8,"N-MOSFET logic-level 50 V 220 mA SOT-23 — relay, lamp, 6× balance",https://www.onsemi.com/pub/Collateral/BSS138-D.PDF
+1,AO3401A,,,Q9,P-MOSFET 30 V 4 A SOT-23 — reverse-polarity blocker,http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf
+1,BAT54S-7-F,,,D1,Dual Schottky series SOT-23 — VCELL ADC pin clamp,https://www.diodes.com/assets/Datasheets/ds11005.pdf
+1,1N4148W-7-F,,,D2,Switching diode SOD-123 — relay coil flyback,https://www.diodes.com/assets/Datasheets/ds30086.pdf
+3,BAT54A-7-F,,,"D3, D4, D5",Dual Schottky common-anode SOT-23 — temperature diode-OR,https://www.diodes.com/assets/Datasheets/ds11005.pdf
+1,"PESD1CAN,215",,,D9,"Dual TVS for CAN bus, SOT-23 — at J3",https://assets.nexperia.com/documents/data-sheet/PESD1CAN.pdf
+1,MMSZ5242B-7-F,,,D10,Zener 12 V SOD-123 — Q9 gate-source clamp,https://www.diodes.com/assets/Datasheets/ds18010.pdf
+1,SMAJ16A,,,D11,"TVS unidirectional 16 V standoff, SMA — 12 V input load dump",https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet
+1,SS14,,,D12,Schottky 40 V 1 A SMA — boost rectifier,https://www.vishay.com/docs/88746/ss12.pdf
+1,C1210C105J5GACTU,,,C1,1 µF 50 V C0G 1210 — FLYING CAPACITOR (C0G mandatory),https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf
+30,CL10B104KB8NNNC,,,"C5–C8, C10–C25, C28, C30, C32, C33, C35, C37–C39, C43, C51",100 nF 50 V X7R 0603 — decoupling,https://product.samsungsem.com/mlcc/CL10B104KB8NNN.do
+10,CL21A106KOQNNNE,,,"C3, C4, C9, C26, C27, C29, C31, C41, C42, C50",10 µF 16 V X5R 0805 — bulk,https://product.samsungsem.com/mlcc/CL21A106KOQNNN.do
+4,CL10A105KB8NNNC,,,"C34, C45, C48, C49",1 µF 50 V X5R 0603 — VDDA / regulator I/O (C49: use 100 V-rated part for 28 V boost output),https://product.samsungsem.com/mlcc/CL10A105KB8NNN.do
+2,CL10A225KP8NNNC,,,"C36, C47","2.2 µF 10 V X5R 0603 — VCAP_1, LDO output",https://product.samsungsem.com/mlcc/CL10A225KP8NNN.do
+1,CL31A226KAHNNNE,,,C44,22 µF 25 V X5R 1206 — buck output,https://product.samsungsem.com/mlcc/CL31A226KAHNNN.do
+1,CL10C101JB8NNNC,,,C2,100 pF 50 V C0G 0603 — VCELL ADC node,https://product.samsungsem.com/mlcc/CL10C101JB8NNN.do
+1,CL10B471KB8NNNC,,,C46,470 pF 50 V X7R 0603 — MIC5219 BYP,https://product.samsungsem.com/mlcc/CL10B471KB8NNN.do
+19,RC0603FR-071KL,,,"R1–R7, R30, R34, R38, R42, R46, R50, R54, R56, R58, R60, R62, R64","1 kΩ 1% 0603 — tap series (fault limit), opto→gate series, temp RC",https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf
+1,RC0805FR-071KL,,,R24,1 kΩ 1% 0805 — AMS lamp current limit (0.1 W),https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf
+2,RT0603BRD07100KL,,,"R8, R9",100 kΩ 0.1% 0603 — VCELL 2:1 divider (sets gain),https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RT_1-to-0.01_RoHS_L_12.pdf
+9,RC0603FR-07100KL,,,"R22, R25, R26, R31, R35, R39, R43, R47, R51","100 kΩ 1% 0603 — RESET pulldown, FET gate–source pulldowns",https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf
+15,RC0603FR-0710KL,,,"R10–R12, R15, R16, R20, R21, R27, R28, R65, R71, R72, R75, R77, R79","10 kΩ 1% 0603 — pullups, 1.65 V / SELFTEST dividers, feedback bottoms",https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf
+1,RT0603BRD07402RL,,,R13,402 Ω 0.1% 0603 — VREF threshold chain (OV tap),https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RT_1-to-0.01_RoHS_L_12.pdf
+1,RT0603BRD07845RL,,,R14,845 Ω 0.1% 0603 — VREF threshold chain (UV tap),https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RT_1-to-0.01_RoHS_L_12.pdf
+1,RT0603BRD071K24L,,,R17,1.24 kΩ 0.1% 0603 — VREF threshold chain bottom,https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RT_1-to-0.01_RoHS_L_12.pdf
+1,RT0603BRD07662RL,,,R18,662 Ω 0.1% 0603 — overtemp threshold top (1.734 V),https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RT_1-to-0.01_RoHS_L_12.pdf
+1,RT0603BRD071K5L,,,R19,1.5 kΩ 0.1% 0603 — overtemp threshold bottom,https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RT_1-to-0.01_RoHS_L_12.pdf
+6,RC1206FR-07100RL,,,"R32, R36, R40, R44, R48, R52",100 Ω 1% 1206 — balance bleed (0.176 W each),https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf
+1,RC0603FR-07100RL,,,R23,100 Ω 1% 0603 — Q1 gate series,https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf
+6,RC0603FR-07470RL,,,"R29, R33, R37, R41, R45, R49",470 Ω 1% 0603 — opto LED current limit,https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf
+6,RC0603FR-07680RL,,,"R53, R55, R57, R59, R61, R63",680 Ω 1% 0603 — temperature sensor pull-ups,https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf
+1,RC0603FR-0752K3L,,,R76,52.3 kΩ 1% 0603 — buck feedback top (5 V),https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf
+1,RC0603FR-07215KL,,,R78,215 kΩ 1% 0603 — boost feedback top (28 V),https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf
+1,RC0603JR-070RL,,,R80,0 Ω 0603 — GNDA↔GND star-point link,https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf
+1,0ZCG0050AF2C,,,F1,PTC resettable fuse 500 mA 1812 — 12 V input,https://www.belfuse.com/resources/datasheets/circuitprotection/ds-cp-0zcg-series.pdf
+1,BLM21PG221SN1D,,,FB1,Ferrite bead 220 Ω @100 MHz 0805 — +3.3V→+3.3VA,https://www.murata.com/products/productdetail?partno=BLM21PG221SN1%23
+1,G5V-1 DC12,,,K1,Signal relay SPDT 12 V coil — NO contact in shutdown circuit (verify SDC current vs 1 A rating),https://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v_1.pdf
+1,PTS645SM43SMTR92 LFS,,,SW1,Tactile pushbutton SMD — manual latch reset,https://www.ckswitches.com/media/1471/pts645.pdf
+1,ABLS-8.000MHZ-B4-T,,,Y1,Crystal 8 MHz HC-49/US SMD — HSE for CAN timing (not yet in schematic),https://abracon.com/Resonators/ABLS.pdf
+2,CL10C180JB8NNNC,,,"C52, C53",18 pF 50 V C0G 0603 — crystal load caps (not yet in schematic),https://product.samsungsem.com/mlcc/CL10C180JB8NNN.do
+1,"TBD — 4.7 µH shielded, ≥2 A sat (per AP63203 datasheet)",,,L1,Buck inductor — value/part from AP63203 typical application,https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf
+1,"TBD — 10 µH, ≥400 mA sat (per TPS61040 datasheet)",,,L2,Boost inductor — value/part from TPS61040 typical application,https://www.ti.com/lit/ds/symlink/tps61040.pdf
+1,FTSH-105-01-L-DV-K,,,J6,"ARM Cortex 10-pin SWD header, 1.27 mm, shrouded",https://suddendocs.samtec.com/catalog_english/ftsh_smt.pdf
+2,TBD — Molex DuraClik 7-ckt vertical header,,,"J1, J2","7-pin keyed locking connectors: cell taps (rated for 42 mA balance current), temperature sensors",https://www.molex.com/en-us/products/connectors/wire-to-board-connectors/duraclik-connectors
+1,TBD — 5-ckt locking header,,,J3,"CAN + 12 V LV: +12V, GND, CANH, CANL, shield",
+3,TBD — 2-ckt locking header,,,"J4, J5, J7",12 V in / shutdown-circuit pass-through / AMS cockpit lamp,

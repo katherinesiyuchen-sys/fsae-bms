@@ -172,3 +172,17 @@ still need re-deriving from the FSAE rulebook — same requirements, different n
 ## Opening this
 
 KiCad 10.0.3. Open **`feb-bms.kicad_pro`**.
+
+## Presentation
+
+Full deck: [BMS.pdf](BMS.pdf) · source: [BMS.pptx](BMS.pptx)
+
+| | |
+|---|---|
+| ![1 – Title](slides/slide01.png) | ![2 – System architecture](slides/slide02.png) |
+| ![3 – Block diagram](slides/slide03.png) | ![4 – Cell voltage: flying capacitor](slides/slide04.png) |
+| ![5 – Cell voltage: differential amplifier](slides/slide05.png) | ![6 – Temperature sensing](slides/slide06.png) |
+| ![7 – Temperature sensing: diode-OR](slides/slide07.png) | ![8 – CAN transceiver + termination](slides/slide08.png) |
+| ![9 – BMS interface to the car](slides/slide09.png) | ![10 – Unsafe-condition monitoring → BMS fault](slides/slide10.png) |
+| ![11 – Cell balancing](slides/slide11.png) | ![12 – MCU pinout](slides/slide12.png) |
+| ![13 – Power](slides/slide13.png) | |

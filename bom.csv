@@ -1,0 +1,57 @@
+Ref,Qty,Value,Footprint,Ordering code / spec,Why this part,Datasheet
+"C1,C34,C45,C48,C49",5,1uF,Capacitor_SMD:C_0603_1608Metric (C1: C_1210_3225Metric C0G),C0G 50 V for C1,"C1 = flying capacitor: MUST be C0G or film (dielectric absorption, voltage coefficient). Others: VDDA / regulator caps.",
+C2,1,100pF,Capacitor_SMD:C_0603_1608Metric,,"ADC input cap at VCELL, C0G.",
+"C3,C4,C9,C26,C27,C29,C31,C41,C42,C50",10,10uF,Capacitor_SMD:C_0805_2012Metric,,Bulk on rails and mux VDD. GNDA-side ones return to GNDA.,
+"C5,C6,C7,C8,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19,C20,C21,C22,C23,C24,C25,C28,C30,C32,C33,C35,C37,C38,C39,C43,C51",30,100nF,Capacitor_SMD:C_0603_1608Metric,,"Decoupling, one per IC supply pin, at the pin. Analog ones return to GNDA.",
+"C36,C47",2,2.2uF,Capacitor_SMD:C_0603_1608Metric,,C36 VCAP_1 (STM32 core regulator — mandatory); C47 LDO output.,
+C40,1,C,ASSIGN,4.7nF DNP,C40 = 4.7 nF split-termination midpoint cap — DNP.,
+C44,1,22uF,Capacitor_SMD:C_1206_3216Metric,,Buck output.,
+C46,1,470pF,Capacitor_SMD:C_0603_1608Metric,,MIC5219 BYP pin — gives the low-noise spec.,
+D1,1,BAT54S,Package_TO_SOT_SMD:SOT-23,BAT54S,Series pair clamping VCELL to +3.3VA / GNDA — protects the ADC pin.,
+D2,1,1N4148W,Diode_SMD:D_SOD-123,1N4148W,"Relay coil flyback diode, cathode to +12V.",https://www.vishay.com/docs/85748/1n4148w.pdf
+"D3,D4,D5,D6,D7,D8",6,BAT54A,Package_TO_SOT_SMD:SOT-23,BAT54A,Common-anode dual Schottky: diode-OR extracting the hottest module (lowest voltage). Only 3 needed — delete D6–D8.,http://www.diodes.com/_files/datasheets/ds11005.pdf
+D9,1,PESD1CAN,Package_TO_SOT_SMD:SOT-23,PESD1CAN,"Dual TVS across CANH/CANL to GND, placed at J3.",
+"D10,D12",2,D,ASSIGN,fill in,D10 = 12 V zener (Q9 gate clamp); D12 = 40 V Schottky boost diode (e.g. SS14). Set values.,
+D11,1,SMAJ16A,Diode_SMD:D_SMA,SMAJ16A,Unidirectional TVS on 12 V input for load-dump transients.,https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet
+F1,1,PTC 500mA,Fuse:Fuse_1812_4532Metric,0ZCG0050AF2C,Resettable input fuse; CalSol precedent 0ZCG0050AF2C.,
+FB1,1,FerriteBead,Inductor_SMD:L_0805_2012Metric,,+3.3V → +3.3VA: one entry point to the quiet analog rail.,
+J1,1,cell_taps,ASSIGN,DuraClik 7,"J1: 7-way keyed locking (Molex DuraClik, CalSol precedent); rated for balance current.",
+J2,1,temp_sensor,ASSIGN,DuraClik 7,J2: 7-way — 6 sensors + TSENSE_RTN to GNDA.,
+J3,1,CAN,ASSIGN,,"J3: CAN + LV, shield one-end only.",
+J4,1,POWER_IN,ASSIGN,,J4: 12 V in.,
+J5,1,SDC,ASSIGN,,"J5: shutdown circuit pass-through, SDC_IN / SDC_OUT.",
+J6,1,Conn_ARM_JTAG_SWD_10,ASSIGN,,J6: standard ARM 10-pin SWD.,http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf
+J7,1,AMS,ASSIGN,,J7: cockpit AMS lamp.,
+K1,1,Relay_SPDT,ASSIGN,select 12 V SPDT,NO contact in the shutdown circuit; coil 12 V ~40 mA. Verify pin numbering against the ordered part.,
+"L1,L2",2,L,ASSIGN,per datasheet,"L1 buck, L2 boost — values from each datasheet typical application.",
+"Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8",8,BSS138,Package_TO_SOT_SMD:SOT-23,BSS138,"Logic-level N-FET: relay driver, lamp driver, six balance switches. Vgs(th) low enough for 3.3 V / opto drive.",https://www.onsemi.com/pub/Collateral/BSS138-D.PDF
+Q9,1,AO3401A,Package_TO_SOT_SMD:SOT-23,AO3401A,P-FET reverse-polarity blocker on the 12 V input. Vgs max ±12 V → zener clamp.,http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf
+"R1,R2,R3,R4,R5,R6,R7,R24,R30,R34,R38,R42,R46,R50,R54,R56,R58,R60,R62,R64",20,1k,Resistor_SMD:R_0603_1608Metric,,R1–R7 tap series (fault limit 25 mA; 2.2 k at 14S). R30… opto→gate series. R24 LED limit.,
+"R8,R9,R22,R25,R26,R31,R35,R39,R43,R47,R51",11,100k,Resistor_SMD:R_0603_1608Metric,"0.1% for R8, R9",R8/R9 0.1% divider (the only gain error). R22 RESET pulldown. R25/26/31… FET gate→source pulldowns.,
+"R10,R11,R12,R15,R16,R20,R21,R27,R28,R65,R66,R67,R68,R69,R70,R71,R72,R75,R77,R79",20,10k,Resistor_SMD:R_0603_1608Metric,,Pullups on open-collector/open-drain outputs; 1.65 V and SELFTEST dividers; TEMP_HOT pullup (R65 only — delete R66–R70).,
+R13,1,402,Resistor_SMD:R_0603_1608Metric,0.1%,R13: VREF divider top → 2.096 V (OV).,
+R14,1,845,Resistor_SMD:R_0603_1608Metric,0.1%,R14: VREF divider mid → 1.246 V (UV).,
+R17,1,1.24k,Resistor_SMD:R_0603_1608Metric,0.1%,"R17: VREF divider bottom. 1 mA chain so LM339 bias current gives 0.3 mV, not 3 mV.",
+R18,1,976,Resistor_SMD:R_0603_1608Metric,"0.1%, 662 Ω",R18 — CHANGE TO 662 Ω for the diode-OR Vf offset (1.734 V = 57 °C).,
+R19,1,1.50k,Resistor_SMD:R_0603_1608Metric,0.1%,R19: temperature threshold divider bottom.,
+"R23,R32,R36,R40,R44,R48,R52",7,100,Resistor_SMD:R_1206_3216Metric (bleed) / R_0603 (R23),1206 for bleed,"Balance bleed resistors: 42 mA, 0.176 W each → 1206. R23 Q1 gate series.",
+"R29,R33,R37,R41,R45,R49",6,470,Resistor_SMD:R_0603_1608Metric,,Opto LED current limit: 4.5 mA.,
+"R53,R55,R57,R59,R61,R63",6,680,Resistor_SMD:R_0603_1608Metric,,"Temperature sensor pull-ups — shunt reference, not NTC.",
+"R73,R74",2,60.4,Resistor_SMD:R_0603_1608Metric,DNP,Split CAN termination — DNP (mid-bus). Populate only at an end node.,
+R76,1,52.3k,Resistor_SMD:R_0603_1608Metric,1%,R76: buck feedback top for 5 V (0.8 V ref).,
+R78,1,215k,Resistor_SMD:R_0603_1608Metric,1%,R78: boost feedback top for 28 V (1.233 V ref).,
+R80,1,0,Resistor_SMD:R_0603_1608Metric,,"R80: single GNDA↔GND link — the star point, adjacent to FB1.",
+SW1,1,SW_Push,Button_Switch_SMD:SW_SPST_PTS645,,Manual latch reset — the only reset (EV 6.1.6).,
+"U1,U2",2,ADG1408YRUZ,Package_SO:TSSOP-16_4.4x5mm_P0.65mm,ADG1408YRUZ,8:1 mux; break-before-make so two taps are never bridged through C1. 36 V max — replace with TMUX8108 (100 V) at 14S.,https://www.analog.com/media/en/technical-documentation/data-sheets/ADG1408_1409.pdf
+U3,1,74LVC1G10,Package_TO_SOT_SMD:SOT-23-5,SN74LVC1G10DBV,3-input NAND → /ADDR7. Detects the read slot.,http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf
+U4,1,LM339,Package_SO:SOIC-14_3.9x8.7mm_P1.27mm,LM339DT,"Quad comparator, open-collector: OV, UV, OT, watchdog inverter. Wired-OR outputs; 5 V supply for input range, pullups to 3.3 V level-shift for free.",https://www.st.com/resource/en/datasheet/lm139.pdf
+"U5,U7,U8",3,74LVC1G02,Package_TO_SOT_SMD:SOT-23-5,SN74LVC1G02DBV,NOR: address gate (U5) and SR latch (U7/U8). NOR = AND of two active-low signals.,https://www.ti.com/lit/ds/symlink/sn74lvc1g02.pdf
+"U6,U11",2,74LVC1G32,Package_TO_SOT_SMD:SOT-23-5,SN74LVC1G32DBV,OR tree merging the four fault sources into SET.,http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf
+U9,1,TPS3823-33DBV,Package_TO_SOT_SMD:SOT-23-5,TPS3823-33DBVR,Watchdog supervisor; open-drain RESET into the OR tree. Kick every 20 ms; check MIN timeout.,https://www.ti.com/lit/ds/symlink/tps3823.pdf
+U10,1,ADR4525,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,ADR4525BRZ,2.500 V reference: source of every comparator threshold and the value the ADC scale is corrected against (LQFP64 has no VREF+).,https://www.analog.com/media/en/technical-documentation/data-sheets/ADR4520_4525_4530_4533_4540_4550.pdf
+"U12,U13,U14,U15,U16,U17",6,LTV-817S,Package_DIP:SMDIP-4_W9.53mm,LTV-817S,Optocoupler per balance channel: level-shifts a ground-referenced GPIO to a FET whose source sits up to 21 V (54 V at 14S) above ground.,http://www.us.liteon.com/downloads/LTV-817-827-847.PDF
+U18,1,STM32F446RETx,Package_QFP:LQFP-64_10x10mm_P0.5mm,STM32F446RET6,"LQFP64. 16 ADC channels; WDT_KICK is a firmware GPIO, not a timer.",https://www.st.com/resource/en/datasheet/stm32f446re.pdf
+U19,1,TJA1051T-3,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,TJA1051T/3,"CAN transceiver; VIO pin = 3.3 V logic side with 5 V bus side, no level shifters. S pin tied low.",http://www.nxp.com/docs/en/data-sheet/TJA1051.pdf
+U20,1,AP63203WU,Package_TO_SOT_SMD:TSOT-23-6,AP63203WU-7,Synchronous buck 12 V → 5 V; no catch diode. FB ref 0.8 V.,https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf
+U21,1,MIC5219-3.3YM5,Package_TO_SOT_SMD:SOT-23-5,MIC5219-3.3YM5-TR,Low-noise LDO 5 V → 3.3 V; strips buck switching noise before the analog section. BYP cap required.,http://ww1.microchip.com/downloads/en/DeviceDoc/MIC5219-500mA-Peak-Output-LDO-Regulator-DS20006021A.pdf
+U22,1,TPS61040DBV,Package_TO_SOT_SMD:SOT-23-5,TPS61040DBVR,Boost for the mux rail (28 V at 6S). FB ref 1.233 V. Tops out at 28 V — different part needed for 65 V at 14S.,http://www.ti.com/lit/ds/symlink/tps61040.pdf
